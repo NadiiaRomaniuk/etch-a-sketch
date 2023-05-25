@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.total {
+  height: 100svh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6svh;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+    width: 700px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(var(--rowNum), 1fr);
+    grid-template-rows: repeat(var(--colNum), 1fr);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    animation: appeare 2s;
+    aspect-ratio: 1;
+}
+
+@keyframes appeare {
+  from {
+    transform: translateY(-1000px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.buttons-left {
+  animation: appear_left 2s;
+}
+
+@keyframes appear_left {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.buttons-right {
+  animation: appear_right 2s;
+}
+
+@keyframes appear_right {
+  from {
+    transform: translateX(500px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.size-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+ 
+}
+
+.main-children {
+  border: 1px pink solid;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1svh;
+}
+
+#size {
+  width: 64px;
+  height: 40px;
+}
+
+#size-button {
+  align-self: center;
+}
+
+.but {
+  font-size: 25px;
+  padding: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  background-color: rgb(0, 0, 0);
+  border: solid pink 2px;
+  border-radius: 8px;
+  color: white;
+  width: 200px;
+  height: 50px;
+ 
+}
+
+.but:hover {
+  font-size: 34px;
+  background-color: pink;
+}
+
+#status {
+  color: rgb(255, 255, 255);
+  font-size: 29px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+  border: solid pink 4px;
+  border-radius: 8px;
+  padding: 10px;
+  width: fit-content;
+  align-self: center;
+}
+
+#status-span {
+  color: pink;
+}
+
+#status-span:hover {
+  color: rgb(201, 66, 88);
+}
+
+#hint {
+  margin: 0;
+  color: pink;
+  font-size: 16.5px;
+  font-weight: 900;
+  height: 10px;
+  margin-bottom: 50px;
+}
+
+#hint:hover {
+  color: rgb(201, 66, 88);
+  font-size: 18px;
+}
+
+#color-choice {
+  display: flex;
+  align-self: center;
+  margin-bottom: 20px;
+  border-color: black;
+  border-radius: 8px;
+  padding: 3px;
+  background-color: pink;
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        width: 400px;
+        height: 400px;
+    }
+
+    .size-container {
+      justify-content: center;
+    }
+
+    .but {
+      align-self: center;
+    }
+
+    .total {
+      padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .main {
+        width: 250px;
+        height: 250px;
+    }
+}
+

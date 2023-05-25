@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="total">
+      <div class="buttons buttons-left">
+        <p id="status">Status: <span id="status-span">CAN'T</span> draw</p>
+        <p id="hint">*Select size, color and click to draw</p>
+        <div class="size-container">
+            <button id="size-button" class="but">Select size</button>
+            <input type="number" id="size" class="but" />
+        </div>
+
+        <button id="eraser" class="but">Eraser</button>
+        <button id="clear" class="but">Clear</button>
+        <button id="border" class="but">Hide border</button>
+    </div>
+
+      <div class="main"></div>
+
+      <div class="buttons buttons-right">
+        <button id="pink" class="but">Pink</button>
+        <button id="random" class="but">Choose</button>
+        <input type="color" id="color-choice">
+        <button id="rainbow" class="but">Rainbow</button>
+      </div>
+    </div>
+    <script src="device_determiner.js" type="module"></script>
+    <script src="desktop_mode.js" type="module"></script>
+    <script src="mobile_mode.js" type="module"></script>
+  </body>
+</html>
