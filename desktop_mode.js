@@ -9,18 +9,6 @@ function desktop() {
 
   /*PLAYGROUNG CREATOR*/
 
-  default_sixteen();
-
-  function default_sixteen() {
-    if (children_amount === 5) {
-      validate_size_default();
-    }
-  }
-
-  function validate_size_default() {
-    counter = counter + 1;
-    add_children();
-  }
   function validate_size() {
     children_amount = document.getElementById("size").value;
     if (children_amount >= 151) {
